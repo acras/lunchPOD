@@ -1,0 +1,3 @@
+<% FoodPicture.all.each do |fp| %>
+  <div class="item"><%= image_tag fp.picture.url(:medium) %>
+<% end %>

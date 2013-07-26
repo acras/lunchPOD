@@ -1,0 +1,27 @@
+<h1>Listing food_pictures</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Day</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @food_pictures.each do |food_picture| %>
+      <tr>
+        <td><%= food_picture.day %></td>
+        <td><%= link_to 'Show', food_picture %></td>
+        <td><%= link_to 'Edit', edit_food_picture_path(food_picture) %></td>
+        <td><%= link_to 'Destroy', food_picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Food picture', new_food_picture_path %>

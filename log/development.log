@@ -1,0 +1,2722 @@
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-22 17:40:54 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/railties-4.0.0/lib/rails/templates/rails/welcome/index.html.erb (4.0ms)
+Completed 200 OK in 72ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-22 19:10:41 -0300
+
+ActiveRecord::PendingMigrationError (Migrations are pending; run 'rake db:migrate RAILS_ENV=development' to resolve this issue.):
+  activerecord (4.0.0) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.0) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__4435301992436179728__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/acras/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/acras/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/acras/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.9ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.6ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.7ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (47.2ms)
+  [1m[36m (31.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (25.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePeople (20130722220853)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "people" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130722220853"]]
+  [1m[36m (28.5ms)[0m  [1mcommit transaction[0m
+Migrating to CreateFoodPictures (20130722220923)
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "food_pictures" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "day" date, "path" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130722220923"]]
+  [1m[36m (27.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-22 19:11:31 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/railties-4.0.0/lib/rails/templates/rails/welcome/index.html.erb (2.2ms)
+Completed 200 OK in 62ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2013-07-22 19:11:35 -0300
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people"
+  Rendered people/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 1867ms (Views: 1856.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-22 19:11:37 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-22 19:11:37 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-22 19:11:37 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-22 19:11:37 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-22 19:11:37 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-22 19:11:37 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-22 19:11:37 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-22 19:11:38 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-22 19:11:38 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-22 19:11:38 -0300
+
+
+Started GET "/people/new" for 127.0.0.1 at 2013-07-22 19:11:39 -0300
+Processing by PeopleController#new as HTML
+  Rendered people/_form.html.erb (127.7ms)
+  Rendered people/new.html.erb within layouts/application (137.0ms)
+Completed 200 OK in 154ms (Views: 150.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2013-07-22 19:11:45 -0300
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v2xOz3y/2zVvicN0WUk5SUbNWLiJwu1YDW0FdO4Rzfk=", "person"=>{"name"=>"Ricardo", "email"=>"ricardo@acras.com.br"}, "commit"=>"Create Person"}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (9.3ms)[0m  INSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Mon, 22 Jul 2013 22:11:45 UTC +00:00], ["email", "ricardo@acras.com.br"], ["name", "Ricardo"], ["updated_at", Mon, 22 Jul 2013 22:11:45 UTC +00:00]]
+  [1m[36m (45.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/people/1
+Completed 302 Found in 68ms (ActiveRecord: 54.5ms)
+
+
+Started GET "/people/1" for 127.0.0.1 at 2013-07-22 19:11:46 -0300
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPerson Load (0.6ms)[0m  SELECT "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered people/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 25ms (Views: 17.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/people/new" for 127.0.0.1 at 2013-07-22 19:11:49 -0300
+Processing by PeopleController#new as HTML
+  Rendered people/_form.html.erb (15.3ms)
+  Rendered people/new.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/people" for 127.0.0.1 at 2013-07-22 19:11:59 -0300
+Processing by PeopleController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v2xOz3y/2zVvicN0WUk5SUbNWLiJwu1YDW0FdO4Rzfk=", "person"=>{"name"=>"Egon", "email"=>"egon@hilgenstieler.com"}, "commit"=>"Create Person"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "people" ("created_at", "email", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Mon, 22 Jul 2013 22:11:59 UTC +00:00], ["email", "egon@hilgenstieler.com"], ["name", "Egon"], ["updated_at", Mon, 22 Jul 2013 22:11:59 UTC +00:00]]
+  [1m[36m (50.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/people/2
+Completed 302 Found in 59ms (ActiveRecord: 51.3ms)
+
+
+Started GET "/people/2" for 127.0.0.1 at 2013-07-22 19:11:59 -0300
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered people/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 18ms (Views: 14.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-22 19:11:59 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-22 19:11:59 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-22 19:11:59 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-22 19:11:59 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-22 19:11:59 -0300
+
+
+Started GET "/food_pictures" for 127.0.0.1 at 2013-07-22 19:12:05 -0300
+Processing by FoodPicturesController#index as HTML
+  [1m[36mFoodPicture Load (0.5ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures"[0m
+  Rendered food_pictures/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 34ms (Views: 23.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-22 19:12:05 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-22 19:12:05 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-22 19:12:05 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-22 19:12:05 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-22 19:12:05 -0300
+
+
+Started GET "/food_pictures/new" for 127.0.0.1 at 2013-07-22 19:12:07 -0300
+Processing by FoodPicturesController#new as HTML
+  Rendered food_pictures/_form.html.erb (52.0ms)
+  Rendered food_pictures/new.html.erb within layouts/application (55.8ms)
+Completed 200 OK in 72ms (Views: 69.1ms | ActiveRecord: 0.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPersonIdToPicture (20130724211245)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "food_pictures" ADD "person_id" integer[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130724211245"]]
+  [1m[36m (38.4ms)[0m  [1mcommit transaction[0m
+Migrating to FixAttachedPicture (20130724211634)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "food_pictures" ADD "picture_file_name" varchar(255)[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "food_pictures" ADD "picture_content_type" varchar(255)
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "food_pictures" ADD "picture_file_size" integer[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "food_pictures" ADD "picture_updated_at" datetime
+  [1m[36m (1.1ms)[0m  [1mCREATE TEMPORARY TABLE "afood_pictures" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "day" date, "path" varchar(255), "created_at" datetime, "updated_at" datetime, "person_id" integer, "picture_file_name" varchar(255), "picture_content_type" varchar(255), "picture_file_size" integer, "picture_updated_at" datetime) [0m
+  [1m[35m (0.3ms)[0m  SELECT * FROM "food_pictures"
+  [1m[36m (0.8ms)[0m  [1mDROP TABLE "food_pictures"[0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "food_pictures" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "day" date, "created_at" datetime, "updated_at" datetime, "person_id" integer, "picture_file_name" varchar(255), "picture_content_type" varchar(255), "picture_file_size" integer, "picture_updated_at" datetime) 
+  [1m[36m (0.3ms)[0m  [1mSELECT * FROM "afood_pictures"[0m
+  [1m[35m (0.6ms)[0m  DROP TABLE "afood_pictures"
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130724211634"]]
+  [1m[35m (29.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-24 18:20:28 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/railties-4.0.0/lib/rails/templates/rails/welcome/index.html.erb (3.9ms)
+Completed 200 OK in 75ms (Views: 18.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/food_pictures" for 127.0.0.1 at 2013-07-24 18:20:34 -0300
+Processing by FoodPicturesController#index as HTML
+Completed 500 Internal Server Error in 7ms
+
+RuntimeError (`attr_accessible` is extracted out of Rails into a gem. Please use new recommended protection model for params(strong_parameters) or add `protected_attributes` to your Gemfile to use old one.):
+  app/models/food_picture.rb:2:in `<class:FoodPicture>'
+  app/models/food_picture.rb:1:in `<top (required)>'
+  app/controllers/food_pictures_controller.rb:7:in `index'
+
+
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.1ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.4ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.3ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (47.0ms)
+
+
+Started GET "/food_pictures" for 127.0.0.1 at 2013-07-24 18:22:06 -0300
+Processing by FoodPicturesController#index as HTML
+  [1m[35mFoodPicture Load (0.3ms)[0m  SELECT "food_pictures".* FROM "food_pictures"
+  Rendered food_pictures/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 121ms (Views: 110.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-24 18:22:06 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-24 18:22:06 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-24 18:22:07 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-24 18:22:07 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-24 18:22:07 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-24 18:22:07 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-24 18:22:07 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-24 18:22:07 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-24 18:22:07 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-24 18:22:07 -0300
+
+
+Started GET "/food_pictures/new" for 127.0.0.1 at 2013-07-24 18:22:09 -0300
+Processing by FoodPicturesController#new as HTML
+  Rendered food_pictures/_form.html.erb (176.4ms)
+  Rendered food_pictures/new.html.erb within layouts/application (185.5ms)
+Completed 200 OK in 203ms (Views: 199.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/food_pictures" for 127.0.0.1 at 2013-07-24 18:22:23 -0300
+Processing by FoodPicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v2xOz3y/2zVvicN0WUk5SUbNWLiJwu1YDW0FdO4Rzfk=", "food_picture"=>{"day(1i)"=>"2013", "day(2i)"=>"7", "day(3i)"=>"24", "path"=>#<ActionDispatch::Http::UploadedFile:0x00000003341ec8 @tempfile=#<Tempfile:/tmp/RackMultipart20130724-23993-11kfpmy>, @original_filename="CPF - Karina.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"food_picture[path]\"; filename=\"CPF - Karina.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create Food picture"}
+Completed 500 Internal Server Error in 4ms
+
+ActiveRecord::UnknownAttributeError (unknown attribute: path):
+  app/controllers/food_pictures_controller.rb:27:in `create'
+
+
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.1ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.5ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.4ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (47.2ms)
+
+
+Started POST "/food_pictures" for 127.0.0.1 at 2013-07-24 18:23:06 -0300
+Processing by FoodPicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v2xOz3y/2zVvicN0WUk5SUbNWLiJwu1YDW0FdO4Rzfk=", "food_picture"=>{"day(1i)"=>"2013", "day(2i)"=>"7", "day(3i)"=>"24", "path"=>#<ActionDispatch::Http::UploadedFile:0x00000004557ec8 @tempfile=#<Tempfile:/tmp/RackMultipart20130724-23993-1uxttdv>, @original_filename="CPF - Karina.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"food_picture[path]\"; filename=\"CPF - Karina.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create Food picture"}
+Unpermitted parameters: path
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (7.5ms)[0m  INSERT INTO "food_pictures" ("created_at", "day", "updated_at") VALUES (?, ?, ?)  [["created_at", Wed, 24 Jul 2013 21:23:06 UTC +00:00], ["day", Wed, 24 Jul 2013], ["updated_at", Wed, 24 Jul 2013 21:23:06 UTC +00:00]]
+  [1m[36m (36.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/food_pictures/1
+Completed 302 Found in 145ms (ActiveRecord: 45.6ms)
+
+
+Started GET "/food_pictures/1" for 127.0.0.1 at 2013-07-24 18:23:06 -0300
+Processing by FoodPicturesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFoodPicture Load (0.6ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered food_pictures/show.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (undefined method `path' for #<FoodPicture:0x00000004671e80>):
+     7: 
+     8: <p>
+     9:   <strong>Path:</strong>
+    10:   <%= @food_picture.path %>
+    11: </p>
+    12: 
+    13: <%= link_to 'Edit', edit_food_picture_path(@food_picture) %> |
+  app/views/food_pictures/show.html.erb:10:in `_app_views_food_pictures_show_html_erb__1583758645682189507_36940420'
+
+
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.1ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.1ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (31.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-24 18:23:57 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/railties-4.0.0/lib/rails/templates/rails/welcome/index.html.erb (0.2ms)
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/food_pictures" for 127.0.0.1 at 2013-07-24 18:24:01 -0300
+Processing by FoodPicturesController#index as HTML
+  [1m[36mFoodPicture Load (0.6ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures"[0m
+  Rendered food_pictures/index.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (undefined method `path' for #<FoodPicture:0x00000004758678>):
+    15:     <% @food_pictures.each do |food_picture| %>
+    16:       <tr>
+    17:         <td><%= food_picture.day %></td>
+    18:         <td><%= food_picture.path %></td>
+    19:         <td><%= link_to 'Show', food_picture %></td>
+    20:         <td><%= link_to 'Edit', edit_food_picture_path(food_picture) %></td>
+    21:         <td><%= link_to 'Destroy', food_picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  app/views/food_pictures/index.html.erb:18:in `block in _app_views_food_pictures_index_html_erb___3581786207024611630_35626780'
+  app/views/food_pictures/index.html.erb:15:in `_app_views_food_pictures_index_html_erb___3581786207024611630_35626780'
+
+
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.1ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.7ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (37.5ms)
+
+
+Started GET "/food_pictures" for 127.0.0.1 at 2013-07-24 18:25:03 -0300
+Processing by FoodPicturesController#index as HTML
+  [1m[35mFoodPicture Load (0.7ms)[0m  SELECT "food_pictures".* FROM "food_pictures"
+  Rendered food_pictures/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 27ms (Views: 23.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-24 18:25:03 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-24 18:25:03 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-24 18:25:03 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-24 18:25:03 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-24 18:25:03 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-24 18:25:03 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-24 18:25:03 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-24 18:25:03 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-24 18:25:03 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-24 18:25:03 -0300
+
+
+Started GET "/food_pictures/1" for 127.0.0.1 at 2013-07-24 18:25:05 -0300
+Processing by FoodPicturesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFoodPicture Load (0.3ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered food_pictures/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 22ms (Views: 18.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/pictures/original/missing.png" for 127.0.0.1 at 2013-07-24 18:25:06 -0300
+
+ActionController::RoutingError (No route matches [GET] "/pictures/original/missing.png"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/acras/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/acras/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/acras/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.3ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.5ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.4ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (87.4ms)
+
+
+Started GET "/food_pictures/1/edit" for 127.0.0.1 at 2013-07-24 18:25:40 -0300
+Processing by FoodPicturesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFoodPicture Load (0.3ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered food_pictures/_form.html.erb (14.0ms)
+  Rendered food_pictures/edit.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 38ms (Views: 32.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/food_pictures/1" for 127.0.0.1 at 2013-07-24 18:25:45 -0300
+Processing by FoodPicturesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v2xOz3y/2zVvicN0WUk5SUbNWLiJwu1YDW0FdO4Rzfk=", "food_picture"=>{"day(1i)"=>"2013", "day(2i)"=>"7", "day(3i)"=>"24", "path"=>#<ActionDispatch::Http::UploadedFile:0x00000002d43ee0 @tempfile=#<Tempfile:/tmp/RackMultipart20130724-23993-1iy7e7u>, @original_filename="CNH Salim.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"food_picture[path]\"; filename=\"CNH Salim.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Update Food picture", "id"=>"1"}
+  [1m[36mFoodPicture Load (0.3ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Unpermitted parameters: path
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/food_pictures/1
+Completed 302 Found in 13ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/food_pictures/1" for 127.0.0.1 at 2013-07-24 18:25:45 -0300
+Processing by FoodPicturesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFoodPicture Load (0.3ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered food_pictures/show.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 22ms (Views: 17.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-24 18:25:45 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-24 18:25:45 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-24 18:25:45 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-24 18:25:45 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-24 18:25:45 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-24 18:25:45 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-24 18:25:45 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-24 18:25:45 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-24 18:25:45 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-24 18:25:45 -0300
+
+
+Started GET "/pictures/original/missing.png" for 127.0.0.1 at 2013-07-24 18:25:45 -0300
+
+ActionController::RoutingError (No route matches [GET] "/pictures/original/missing.png"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/acras/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/acras/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/acras/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.2ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.2ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.6ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (68.3ms)
+
+
+Started GET "/food_pictures/1" for 127.0.0.1 at 2013-07-24 18:25:47 -0300
+Processing by FoodPicturesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFoodPicture Load (0.5ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered food_pictures/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 33ms (Views: 26.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-24 18:25:47 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-24 18:25:47 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-24 18:25:47 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-24 18:25:47 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-24 18:25:47 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-24 18:25:47 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-24 18:25:47 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-24 18:25:47 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-24 18:25:47 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-24 18:25:47 -0300
+
+
+Started GET "/pictures/original/missing.png" for 127.0.0.1 at 2013-07-24 18:25:47 -0300
+
+ActionController::RoutingError (No route matches [GET] "/pictures/original/missing.png"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/acras/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/acras/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/acras/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.4ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.2ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (61.5ms)
+
+
+Started GET "/food_pictures/1" for 127.0.0.1 at 2013-07-24 18:25:50 -0300
+Processing by FoodPicturesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFoodPicture Load (0.6ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered food_pictures/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 27ms (Views: 17.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-24 18:25:50 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-24 18:25:50 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-24 18:25:50 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-24 18:25:50 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-24 18:25:50 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-24 18:25:50 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-24 18:25:50 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-24 18:25:50 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-24 18:25:50 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-24 18:25:50 -0300
+
+
+Started GET "/pictures/original/missing.png" for 127.0.0.1 at 2013-07-24 18:25:50 -0300
+
+ActionController::RoutingError (No route matches [GET] "/pictures/original/missing.png"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/acras/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/acras/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/acras/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.3ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.8ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.6ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (77.8ms)
+
+
+Started GET "/food_pictures/1/edit" for 127.0.0.1 at 2013-07-24 18:31:10 -0300
+Processing by FoodPicturesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFoodPicture Load (0.3ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered food_pictures/_form.html.erb (14.6ms)
+  Rendered food_pictures/edit.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 37ms (Views: 33.0ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/food_pictures/1" for 127.0.0.1 at 2013-07-24 18:31:15 -0300
+Processing by FoodPicturesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v2xOz3y/2zVvicN0WUk5SUbNWLiJwu1YDW0FdO4Rzfk=", "food_picture"=>{"day(1i)"=>"2013", "day(2i)"=>"7", "day(3i)"=>"24", "path"=>#<ActionDispatch::Http::UploadedFile:0x00000002d04330 @tempfile=#<Tempfile:/tmp/RackMultipart20130724-23993-13j10hi>, @original_filename="CNH Ricardo-PEQ.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"food_picture[path]\"; filename=\"CNH Ricardo-PEQ.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Update Food picture", "id"=>"1"}
+  [1m[35mFoodPicture Load (0.3ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1  [["id", "1"]]
+Unpermitted parameters: path
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/food_pictures/1
+Completed 302 Found in 13ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/food_pictures/1" for 127.0.0.1 at 2013-07-24 18:31:15 -0300
+Processing by FoodPicturesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFoodPicture Load (0.3ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered food_pictures/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 20ms (Views: 15.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-24 18:31:15 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-24 18:31:15 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-24 18:31:15 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-24 18:31:15 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-24 18:31:15 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-24 18:31:15 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-24 18:31:15 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-24 18:31:15 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-24 18:31:15 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-24 18:31:15 -0300
+
+
+Started GET "/pictures/original/missing.png" for 127.0.0.1 at 2013-07-24 18:31:16 -0300
+
+ActionController::RoutingError (No route matches [GET] "/pictures/original/missing.png"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/acras/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/acras/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/acras/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.2ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.3ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.3ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (58.2ms)
+  [1m[36mFoodPicture Load (0.6ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" ORDER BY "food_pictures"."id" DESC LIMIT 1[0m
+  [1m[36mFoodPicture Load (0.4ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" ORDER BY "food_pictures"."id" DESC LIMIT 1[0m
+
+
+Started GET "/food_pictures/1/edit" for 127.0.0.1 at 2013-07-24 18:35:37 -0300
+Processing by FoodPicturesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFoodPicture Load (0.3ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered food_pictures/_form.html.erb (13.9ms)
+  Rendered food_pictures/edit.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 34ms (Views: 28.9ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/food_pictures/1" for 127.0.0.1 at 2013-07-24 18:35:41 -0300
+Processing by FoodPicturesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v2xOz3y/2zVvicN0WUk5SUbNWLiJwu1YDW0FdO4Rzfk=", "food_picture"=>{"day(1i)"=>"2013", "day(2i)"=>"7", "day(3i)"=>"24", "picture"=>#<ActionDispatch::Http::UploadedFile:0x000000034a3f78 @tempfile=#<Tempfile:/tmp/RackMultipart20130724-23993-1btxnfp>, @original_filename="CNH Ricardo.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"food_picture[picture]\"; filename=\"CNH Ricardo.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Update Food picture", "id"=>"1"}
+  [1m[36mFoodPicture Load (0.3ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.3ms)[0m  begin transaction
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/CNH Ricardo20130724-23993-bu4r3r.png[0]'
+Command :: identify -format %m '/tmp/CNH Ricardo20130724-23993-bu4r3r.png[0]'
+Command :: identify -format %m '/tmp/CNH Ricardo20130724-23993-bu4r3r.png[0]'
+Command :: identify -format %m '/tmp/CNH Ricardo20130724-23993-bu4r3r.png[0]'
+Command :: convert '/tmp/CNH Ricardo20130724-23993-bu4r3r.png[0]' -auto-orient -resize "640x480" '/tmp/CNH Ricardo20130724-23993-bu4r3r20130724-23993-1mzu93x'
+Command :: file -b --mime '/tmp/CNH Ricardo20130724-23993-bu4r3r20130724-23993-1mzu93x'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/CNH Ricardo20130724-23993-bu4r3r.png[0]'
+Command :: identify -format %m '/tmp/CNH Ricardo20130724-23993-bu4r3r.png[0]'
+Command :: identify -format %m '/tmp/CNH Ricardo20130724-23993-bu4r3r.png[0]'
+Command :: identify -format %m '/tmp/CNH Ricardo20130724-23993-bu4r3r.png[0]'
+Command :: convert '/tmp/CNH Ricardo20130724-23993-bu4r3r.png[0]' -auto-orient -resize "64x48" '/tmp/CNH Ricardo20130724-23993-bu4r3r20130724-23993-1iq8ojy'
+Command :: file -b --mime '/tmp/CNH Ricardo20130724-23993-bu4r3r20130724-23993-1iq8ojy'
+Binary data inserted for `string` type on column `picture_content_type`
+  [1m[36mSQL (1.9ms)[0m  [1mUPDATE "food_pictures" SET "picture_file_name" = ?, "picture_content_type" = ?, "picture_file_size" = ?, "picture_updated_at" = ?, "updated_at" = ? WHERE "food_pictures"."id" = 1[0m  [["picture_file_name", "CNH_Ricardo.png"], ["picture_content_type", "image/png"], ["picture_file_size", 3511890], ["picture_updated_at", Wed, 24 Jul 2013 21:35:41 UTC +00:00], ["updated_at", Wed, 24 Jul 2013 21:35:43 UTC +00:00]]
+  [1m[35m (25.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/food_pictures/1
+Completed 302 Found in 1904ms (ActiveRecord: 28.4ms)
+
+
+Started GET "/food_pictures/1" for 127.0.0.1 at 2013-07-24 18:35:43 -0300
+Processing by FoodPicturesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFoodPicture Load (0.3ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered food_pictures/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 22ms (Views: 17.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-24 18:35:43 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-24 18:35:43 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-24 18:35:43 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-24 18:35:43 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-24 18:35:43 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-24 18:35:43 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-24 18:35:43 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-24 18:35:43 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-24 18:35:43 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-24 18:35:43 -0300
+
+
+Started GET "/food_pictures/1" for 127.0.0.1 at 2013-07-24 18:36:34 -0300
+Processing by FoodPicturesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFoodPicture Load (0.5ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered food_pictures/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 29ms (Views: 21.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-24 18:36:34 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-24 18:36:34 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-24 18:36:34 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-24 18:36:34 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-24 18:36:34 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-24 18:36:34 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-24 18:36:34 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-24 18:36:34 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-24 18:36:34 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-24 18:36:34 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-24 18:39:01 -0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/railties-4.0.0/lib/rails/templates/rails/welcome/index.html.erb (0.2ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-24 18:39:50 -0300
+
+ActionController::RoutingError (uninitialized constant WelcomeController):
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `constantize'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__919159560452261092__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/acras/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/acras/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/acras/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.6ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.5ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.0ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (106.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-24 18:40:42 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-24 18:40:42 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-24 18:40:42 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-24 18:40:42 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-24 18:40:42 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-24 18:40:42 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-24 18:40:42 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-24 18:40:42 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-24 18:40:42 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-24 18:40:42 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-24 18:40:42 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-24 18:45:28 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 285ms (Views: 283.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-24 18:45:28 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-24 18:45:28 -0300
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-24 18:45:28 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-24 18:45:28 -0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-24 18:45:28 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-24 18:45:28 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-24 18:45:28 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-24 18:45:28 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-24 18:45:28 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-24 18:45:28 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-24 18:45:28 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-24 18:45:28 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-24 18:45:28 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-24 18:45:28 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-24 18:45:28 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-24 18:45:29 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-24 18:45:42 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 106ms (Views: 103.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-24 18:45:42 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-24 18:45:42 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-24 18:45:42 -0300
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-24 18:45:42 -0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-24 18:45:42 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-24 18:45:42 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-24 18:45:42 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-24 18:45:42 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-24 18:45:42 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-24 18:45:42 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-24 18:45:42 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-24 18:45:42 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-24 18:45:42 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-24 18:45:42 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-24 18:45:42 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-24 18:45:42 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-24 18:48:36 -0300
+Processing by HomeController#index as HTML
+  [1m[36mFoodPicture Load (0.5ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures"[0m
+  Rendered home/index.html.erb within layouts/application (82.3ms)
+Completed 200 OK in 104ms (Views: 99.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-24 18:48:37 -0300
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-24 18:48:37 -0300
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-24 18:48:37 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-24 18:48:37 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-24 18:48:37 -0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-24 18:48:37 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-24 18:48:37 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-24 18:48:37 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-24 18:48:37 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-24 18:48:37 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-24 18:48:37 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-24 18:48:37 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-24 18:48:37 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-24 18:48:37 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-24 18:48:37 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-24 18:48:37 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-24 18:49:30 -0300
+Processing by HomeController#index as HTML
+  [1m[35mFoodPicture Load (0.5ms)[0m  SELECT "food_pictures".* FROM "food_pictures"
+  Rendered home/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 29ms (Views: 25.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-24 18:49:30 -0300
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-24 18:49:30 -0300
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-24 18:49:30 -0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-24 18:49:30 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-24 18:49:31 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-24 18:49:31 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-24 18:49:31 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-24 18:49:31 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-24 18:49:31 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-24 18:49:31 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-24 18:49:31 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-24 18:49:31 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-24 18:49:31 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-24 18:49:31 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-24 18:49:31 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-24 18:49:31 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-24 18:50:03 -0300
+Processing by HomeController#index as HTML
+  [1m[36mFoodPicture Load (0.5ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures"[0m
+  Rendered home/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-24 18:50:03 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-24 18:50:03 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-24 18:50:03 -0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-24 18:50:03 -0300
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-24 18:50:03 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-24 18:50:03 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-24 18:50:03 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-24 18:50:03 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-24 18:50:03 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-24 18:50:03 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-24 18:50:03 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-24 18:50:03 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-24 18:50:03 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-24 18:50:03 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-24 18:50:03 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-24 18:50:03 -0300
+
+
+Started GET "/food_pictures" for 127.0.0.1 at 2013-07-24 18:52:31 -0300
+Processing by FoodPicturesController#index as HTML
+  [1m[35mFoodPicture Load (0.7ms)[0m  SELECT "food_pictures".* FROM "food_pictures"
+  Rendered food_pictures/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 45ms (Views: 40.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/food_pictures/new" for 127.0.0.1 at 2013-07-24 18:52:33 -0300
+Processing by FoodPicturesController#new as HTML
+  Rendered food_pictures/_form.html.erb (12.1ms)
+  Rendered food_pictures/new.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 37ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/food_pictures" for 127.0.0.1 at 2013-07-24 18:52:44 -0300
+Processing by FoodPicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v2xOz3y/2zVvicN0WUk5SUbNWLiJwu1YDW0FdO4Rzfk=", "food_picture"=>{"day(1i)"=>"2013", "day(2i)"=>"7", "day(3i)"=>"24", "picture"=>#<ActionDispatch::Http::UploadedFile:0x000000033f4550 @tempfile=#<Tempfile:/tmp/RackMultipart20130724-23993-jnuw29>, @original_filename="CNH Salim.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"food_picture[picture]\"; filename=\"CNH Salim.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create Food picture"}
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/CNH Salim20130724-23993-1ocbf8r.png[0]'
+Command :: identify -format %m '/tmp/CNH Salim20130724-23993-1ocbf8r.png[0]'
+Command :: identify -format %m '/tmp/CNH Salim20130724-23993-1ocbf8r.png[0]'
+Command :: identify -format %m '/tmp/CNH Salim20130724-23993-1ocbf8r.png[0]'
+Command :: convert '/tmp/CNH Salim20130724-23993-1ocbf8r.png[0]' -auto-orient -resize "640x480" '/tmp/CNH Salim20130724-23993-1ocbf8r20130724-23993-10hifo3'
+Command :: file -b --mime '/tmp/CNH Salim20130724-23993-1ocbf8r20130724-23993-10hifo3'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/CNH Salim20130724-23993-1ocbf8r.png[0]'
+Command :: identify -format %m '/tmp/CNH Salim20130724-23993-1ocbf8r.png[0]'
+Command :: identify -format %m '/tmp/CNH Salim20130724-23993-1ocbf8r.png[0]'
+Command :: identify -format %m '/tmp/CNH Salim20130724-23993-1ocbf8r.png[0]'
+Command :: convert '/tmp/CNH Salim20130724-23993-1ocbf8r.png[0]' -auto-orient -resize "64x48" '/tmp/CNH Salim20130724-23993-1ocbf8r20130724-23993-4grlie'
+Command :: file -b --mime '/tmp/CNH Salim20130724-23993-1ocbf8r20130724-23993-4grlie'
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `picture_content_type`
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "food_pictures" ("created_at", "day", "picture_content_type", "picture_file_name", "picture_file_size", "picture_updated_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Wed, 24 Jul 2013 21:52:45 UTC +00:00], ["day", Wed, 24 Jul 2013], ["picture_content_type", "image/png"], ["picture_file_name", "CNH_Salim.png"], ["picture_file_size", 3388147], ["picture_updated_at", Wed, 24 Jul 2013 21:52:44 UTC +00:00], ["updated_at", Wed, 24 Jul 2013 21:52:45 UTC +00:00]]
+  [1m[36m (30.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/food_pictures/2
+Completed 302 Found in 1753ms (ActiveRecord: 32.3ms)
+
+
+Started GET "/food_pictures/2" for 127.0.0.1 at 2013-07-24 18:52:45 -0300
+Processing by FoodPicturesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mFoodPicture Load (0.7ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered food_pictures/show.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 48ms (Views: 41.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/food_pictures/new" for 127.0.0.1 at 2013-07-24 18:52:52 -0300
+Processing by FoodPicturesController#new as HTML
+  Rendered food_pictures/_form.html.erb (17.8ms)
+  Rendered food_pictures/new.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 43ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/food_pictures" for 127.0.0.1 at 2013-07-24 18:53:00 -0300
+Processing by FoodPicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v2xOz3y/2zVvicN0WUk5SUbNWLiJwu1YDW0FdO4Rzfk=", "food_picture"=>{"day(1i)"=>"2013", "day(2i)"=>"7", "day(3i)"=>"24", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00000004531200 @tempfile=#<Tempfile:/tmp/RackMultipart20130724-23993-52e3xp>, @original_filename="CPF - Karina-PEQ.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"food_picture[picture]\"; filename=\"CPF - Karina-PEQ.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create Food picture"}
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/CPF - Karina-PEQ20130724-23993-a3c5yn.png[0]'
+Command :: identify -format %m '/tmp/CPF - Karina-PEQ20130724-23993-a3c5yn.png[0]'
+Command :: identify -format %m '/tmp/CPF - Karina-PEQ20130724-23993-a3c5yn.png[0]'
+Command :: identify -format %m '/tmp/CPF - Karina-PEQ20130724-23993-a3c5yn.png[0]'
+Command :: convert '/tmp/CPF - Karina-PEQ20130724-23993-a3c5yn.png[0]' -auto-orient -resize "640x480" '/tmp/CPF - Karina-PEQ20130724-23993-a3c5yn20130724-23993-4gixhb'
+Command :: file -b --mime '/tmp/CPF - Karina-PEQ20130724-23993-a3c5yn20130724-23993-4gixhb'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/CPF - Karina-PEQ20130724-23993-a3c5yn.png[0]'
+Command :: identify -format %m '/tmp/CPF - Karina-PEQ20130724-23993-a3c5yn.png[0]'
+Command :: identify -format %m '/tmp/CPF - Karina-PEQ20130724-23993-a3c5yn.png[0]'
+Command :: identify -format %m '/tmp/CPF - Karina-PEQ20130724-23993-a3c5yn.png[0]'
+Command :: convert '/tmp/CPF - Karina-PEQ20130724-23993-a3c5yn.png[0]' -auto-orient -resize "64x48" '/tmp/CPF - Karina-PEQ20130724-23993-a3c5yn20130724-23993-111hprv'
+Command :: file -b --mime '/tmp/CPF - Karina-PEQ20130724-23993-a3c5yn20130724-23993-111hprv'
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `picture_content_type`
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "food_pictures" ("created_at", "day", "picture_content_type", "picture_file_name", "picture_file_size", "picture_updated_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Wed, 24 Jul 2013 21:53:01 UTC +00:00], ["day", Wed, 24 Jul 2013], ["picture_content_type", "image/png"], ["picture_file_name", "CPF_-_Karina-PEQ.png"], ["picture_file_size", 243481], ["picture_updated_at", Wed, 24 Jul 2013 21:53:00 UTC +00:00], ["updated_at", Wed, 24 Jul 2013 21:53:01 UTC +00:00]]
+  [1m[36m (32.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/food_pictures/3
+Completed 302 Found in 1254ms (ActiveRecord: 34.4ms)
+
+
+Started GET "/food_pictures/3" for 127.0.0.1 at 2013-07-24 18:53:01 -0300
+Processing by FoodPicturesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mFoodPicture Load (0.3ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered food_pictures/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 30ms (Views: 24.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-24 18:53:04 -0300
+Processing by HomeController#index as HTML
+  [1m[36mFoodPicture Load (0.5ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures"[0m
+  Rendered home/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 35ms (Views: 32.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-24 18:53:21 -0300
+Processing by HomeController#index as HTML
+  [1m[35mFoodPicture Load (0.5ms)[0m  SELECT "food_pictures".* FROM "food_pictures"
+  Rendered home/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 32ms (Views: 29.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-24 18:53:21 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-24 18:53:21 -0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-24 18:53:21 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-24 18:53:21 -0300
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-24 18:53:21 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-24 18:53:21 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-24 18:53:21 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-24 18:53:21 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-24 18:53:21 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-24 18:53:21 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-24 18:53:21 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-24 18:53:22 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-24 18:53:22 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-24 18:53:22 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-24 18:53:22 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-24 18:53:22 -0300
+
+
+Started GET "/people" for 127.0.0.1 at 2013-07-24 22:03:13 -0300
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered people/index.html.erb within layouts/application (166.9ms)
+Completed 200 OK in 201ms (Views: 190.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-24 22:03:14 -0300
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-24 22:03:14 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-24 22:03:14 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-24 22:03:14 -0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-24 22:03:14 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-24 22:03:14 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-24 22:03:14 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-24 22:03:14 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-24 22:03:14 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-24 22:03:14 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-24 22:03:14 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-24 22:03:14 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-24 22:03:14 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-24 22:03:14 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-24 22:03:14 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-24 22:03:14 -0300
+
+
+Started GET "/food_pictures" for 127.0.0.1 at 2013-07-24 22:03:23 -0300
+Processing by FoodPicturesController#index as HTML
+  [1m[35mFoodPicture Load (0.5ms)[0m  SELECT "food_pictures".* FROM "food_pictures"
+  Rendered food_pictures/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 29ms (Views: 27.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-24 22:03:23 -0300
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-24 22:03:23 -0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-24 22:03:23 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-24 22:03:23 -0300
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-24 22:03:23 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-24 22:03:23 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-24 22:03:23 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-24 22:03:23 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-24 22:03:23 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-24 22:03:23 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-24 22:03:23 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-24 22:03:23 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-24 22:03:23 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-24 22:03:23 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-24 22:03:23 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-24 22:03:23 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-24 22:03:33 -0300
+Processing by HomeController#index as HTML
+  [1m[36mFoodPicture Load (0.5ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures"[0m
+  Rendered home/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 35ms (Views: 32.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-24 22:03:33 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-24 22:03:33 -0300
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-24 22:03:33 -0300
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-24 22:03:33 -0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-24 22:03:33 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-24 22:03:33 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-24 22:03:33 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-24 22:03:33 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-24 22:03:33 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-24 22:03:33 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-24 22:03:33 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-24 22:03:33 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-24 22:03:33 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-24 22:03:33 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-24 22:03:33 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-24 22:03:33 -0300
+  [1m[36mFoodPicture Load (0.4ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures"[0m
+  [1m[35mFoodPicture Load (0.6ms)[0m  SELECT "food_pictures".* FROM "food_pictures"
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from irb_binding at (irb):24)
+  [1m[36mFoodPicture Load (0.8ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" LIMIT 1[0m
+  [1m[35mFoodPicture Load (0.6ms)[0m  SELECT "food_pictures".* FROM "food_pictures"
+  [1m[36mFoodPicture Load (0.5ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures"[0m
+  [1m[35mFoodPicture Load (0.6ms)[0m  SELECT "food_pictures".* FROM "food_pictures"
+  [1m[36mFoodPicture Load (0.5ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-25 08:34:05 -0300
+Processing by HomeController#index as HTML
+  [1m[35mFoodPicture Load (1.1ms)[0m  SELECT "food_pictures".* FROM "food_pictures"
+  Rendered home/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 50ms (Views: 46.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-25 08:34:05 -0300
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-25 08:34:06 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-25 08:34:06 -0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-25 08:34:06 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-25 08:34:06 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-25 08:34:06 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-25 08:34:06 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-25 08:34:06 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-25 08:34:06 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-25 08:34:06 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-25 08:34:06 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-25 08:34:06 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-25 08:34:06 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-25 08:34:06 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-25 08:34:06 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-25 08:34:06 -0300
+  [1m[36mFoodPicture Load (0.5ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" ORDER BY "food_pictures"."id" ASC LIMIT 1[0m
+  [1m[35mFoodPicture Load (0.5ms)[0m  SELECT "food_pictures".* FROM "food_pictures" ORDER BY "food_pictures"."id" ASC LIMIT 1
+  [1m[36mFoodPicture Load (0.6ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day > '2013-07-24') ORDER BY "food_pictures"."id" ASC LIMIT 1[0m
+  [1m[35mFoodPicture Load (0.7ms)[0m  SELECT "food_pictures".* FROM "food_pictures"
+  [1m[36mFoodPicture Load (0.5ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures"[0m
+  [1m[35mSQL (26.4ms)[0m  DELETE FROM "food_pictures"
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-26 13:59:16 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (Migrations are pending; run 'rake db:migrate RAILS_ENV=development' to resolve this issue.):
+  activerecord (4.0.0) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.0) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__886690833480944793__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/acras/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/acras/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/acras/.rvm/rubies/ruby-2.0.0-p0/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.2ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.4ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (68.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to Testeteste (20130725120638)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20130725120638"]]
+  [1m[35m (43.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-26 14:00:14 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (19.1ms)
+Completed 500 Internal Server Error in 90ms
+
+ActionView::Template::Error (undefined local variable or method `set_person' for #<Class:0x0000000387a4f8>):
+    1: <% FoodPicture.all.each do |fp| %>
+    2:   <div class="item"><%= image_tag fp.picture.url(:medium) %>
+    3: <% end %>
+  app/models/food_picture.rb:4:in `<class:FoodPicture>'
+  app/models/food_picture.rb:1:in `<top (required)>'
+  app/views/home/index.html.erb:1:in `_app_views_home_index_html_erb__4521448123211187853_29569280'
+
+
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.2ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.3ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (31.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-26 14:00:54 -0300
+Processing by HomeController#index as HTML
+  [1m[35mFoodPicture Load (0.4ms)[0m  SELECT "food_pictures".* FROM "food_pictures"
+  Rendered home/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 258ms (Views: 253.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-26 14:00:54 -0300
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-26 14:00:54 -0300
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-26 14:00:54 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-26 14:00:54 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-26 14:00:55 -0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-26 14:00:55 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-26 14:00:55 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-26 14:00:55 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-26 14:00:55 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-26 14:00:55 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-26 14:00:55 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-26 14:00:55 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-26 14:00:55 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-26 14:00:55 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-26 14:00:55 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-26 14:00:55 -0300
+
+
+Started GET "/people" for 127.0.0.1 at 2013-07-26 14:00:59 -0300
+Processing by PeopleController#index as HTML
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT "people".* FROM "people"[0m
+  Rendered people/index.html.erb within layouts/application (53.2ms)
+Completed 200 OK in 156ms (Views: 142.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-26 14:01:00 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-26 14:01:00 -0300
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-26 14:01:00 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-26 14:01:00 -0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-26 14:01:00 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-26 14:01:00 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-26 14:01:00 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-26 14:01:00 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-26 14:01:00 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-26 14:01:00 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-26 14:01:00 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-26 14:01:00 -0300
+
+
+Started DELETE "/people/2" for 127.0.0.1 at 2013-07-26 14:01:03 -0300
+Processing by PeopleController#destroy as HTML
+  Parameters: {"authenticity_token"=>"v2xOz3y/2zVvicN0WUk5SUbNWLiJwu1YDW0FdO4Rzfk=", "id"=>"2"}
+  [1m[35mPerson Load (0.8ms)[0m  SELECT "people".* FROM "people" WHERE "people"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (7.8ms)[0m  DELETE FROM "people" WHERE "people"."id" = ?  [["id", 2]]
+  [1m[36m (44.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/people
+Completed 302 Found in 68ms (ActiveRecord: 53.1ms)
+
+
+Started GET "/people" for 127.0.0.1 at 2013-07-26 14:01:03 -0300
+Processing by PeopleController#index as HTML
+  [1m[35mPerson Load (0.6ms)[0m  SELECT "people".* FROM "people"
+  Rendered people/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 39ms (Views: 36.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-26 14:01:03 -0300
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-26 14:01:03 -0300
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-26 14:01:03 -0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-26 14:01:03 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-26 14:01:03 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-26 14:01:03 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-26 14:01:03 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-26 14:01:03 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-26 14:01:03 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-26 14:01:03 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-26 14:01:03 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-26 14:01:03 -0300
+
+
+Started GET "/food_pictures" for 127.0.0.1 at 2013-07-26 14:01:06 -0300
+Processing by FoodPicturesController#index as HTML
+  [1m[36mFoodPicture Load (0.6ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures"[0m
+  Rendered food_pictures/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 28ms (Views: 24.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-26 14:01:06 -0300
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-26 14:01:06 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-26 14:01:06 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-26 14:01:06 -0300
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-26 14:01:06 -0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-26 14:01:06 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-26 14:01:06 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-26 14:01:06 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-26 14:01:06 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-26 14:01:06 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-26 14:01:06 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-26 14:01:06 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-26 14:01:06 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-26 14:01:06 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-26 14:01:06 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-26 14:01:06 -0300
+
+
+Started GET "/food_pictures/new" for 127.0.0.1 at 2013-07-26 14:04:38 -0300
+Processing by FoodPicturesController#new as HTML
+  Rendered food_pictures/_form.html.erb (199.3ms)
+  Rendered food_pictures/new.html.erb within layouts/application (208.4ms)
+Completed 200 OK in 232ms (Views: 229.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/food_pictures" for 127.0.0.1 at 2013-07-26 14:05:01 -0300
+Processing by FoodPicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v2xOz3y/2zVvicN0WUk5SUbNWLiJwu1YDW0FdO4Rzfk=", "food_picture"=>{"day(1i)"=>"2013", "day(2i)"=>"7", "day(3i)"=>"25", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00000002538480 @tempfile=#<Tempfile:/tmp/RackMultipart20130726-23819-1p5bzuj>, @original_filename="photo 1.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"food_picture[picture]\"; filename=\"photo 1.JPG\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Food picture"}
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/photo 120130726-23819-17oa6vz.JPG[0]'
+Command :: identify -format %m '/tmp/photo 120130726-23819-17oa6vz.JPG[0]'
+Command :: identify -format %m '/tmp/photo 120130726-23819-17oa6vz.JPG[0]'
+Command :: identify -format %m '/tmp/photo 120130726-23819-17oa6vz.JPG[0]'
+Command :: convert '/tmp/photo 120130726-23819-17oa6vz.JPG[0]' -auto-orient -resize "640x480" '/tmp/photo 120130726-23819-17oa6vz20130726-23819-1orej59'
+Command :: file -b --mime '/tmp/photo 120130726-23819-17oa6vz20130726-23819-1orej59'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/photo 120130726-23819-17oa6vz.JPG[0]'
+Command :: identify -format %m '/tmp/photo 120130726-23819-17oa6vz.JPG[0]'
+Command :: identify -format %m '/tmp/photo 120130726-23819-17oa6vz.JPG[0]'
+Command :: identify -format %m '/tmp/photo 120130726-23819-17oa6vz.JPG[0]'
+Command :: convert '/tmp/photo 120130726-23819-17oa6vz.JPG[0]' -auto-orient -resize "64x48" '/tmp/photo 120130726-23819-17oa6vz20130726-23819-hb5i2i'
+Command :: file -b --mime '/tmp/photo 120130726-23819-17oa6vz20130726-23819-hb5i2i'
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT "people".* FROM "people" ORDER BY "people"."id" ASC LIMIT 1[0m
+Binary data inserted for `string` type on column `picture_content_type`
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "food_pictures" ("created_at", "day", "picture_content_type", "picture_file_name", "picture_file_size", "picture_updated_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 26 Jul 2013 17:05:03 UTC +00:00], ["day", Thu, 25 Jul 2013], ["picture_content_type", "image/jpeg"], ["picture_file_name", "photo_1.JPG"], ["picture_file_size", 1116250], ["picture_updated_at", Fri, 26 Jul 2013 17:05:01 UTC +00:00], ["updated_at", Fri, 26 Jul 2013 17:05:03 UTC +00:00]]
+  [1m[36m (31.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/food_pictures/4
+Completed 302 Found in 1906ms (ActiveRecord: 33.6ms)
+
+
+Started GET "/food_pictures/4" for 127.0.0.1 at 2013-07-26 14:05:03 -0300
+Processing by FoodPicturesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mFoodPicture Load (0.6ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1  [["id", "4"]]
+  Rendered food_pictures/show.html.erb within layouts/application (7.7ms)
+Completed 500 Internal Server Error in 24ms
+
+ActionView::Template::Error (undefined method `day' for #<Paperclip::Attachment:0x000000038502e8>):
+    1: <h2><%= @food_picture.picture.day.strftime('%d/%m/%Y') %></h2>
+    2: <p>
+    3:   <strong>Picture:</strong>
+    4:   <%= image_tag @food_picture.picture.url(:medium) %>
+  app/views/food_pictures/show.html.erb:1:in `_app_views_food_pictures_show_html_erb__4586325262570860757_29520540'
+
+
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.5ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.1ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (108.7ms)
+
+
+Started GET "/food_pictures/4" for 127.0.0.1 at 2013-07-26 14:05:33 -0300
+Processing by FoodPicturesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mFoodPicture Load (0.3ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  Rendered food_pictures/show.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (undefined method `strftime' for #<Paperclip::Attachment:0x00000003563918>):
+    1: <h2><%= @food_picture.picture.strftime('%d/%m/%Y') %></h2>
+    2: <p>
+    3:   <strong>Picture:</strong>
+    4:   <%= image_tag @food_picture.picture.url(:medium) %>
+  app/views/food_pictures/show.html.erb:1:in `_app_views_food_pictures_show_html_erb__4586325262570860757_27868240'
+
+
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.9ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.7ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (30.1ms)
+
+
+Started GET "/food_pictures/4" for 127.0.0.1 at 2013-07-26 14:05:35 -0300
+Processing by FoodPicturesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mFoodPicture Load (0.3ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1  [["id", "4"]]
+  Rendered food_pictures/show.html.erb within layouts/application (5.7ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined method `strftime' for #<Paperclip::Attachment:0x00000003884d68>):
+    1: <h2><%= @food_picture.picture.strftime('%d/%m/%Y') %></h2>
+    2: <p>
+    3:   <strong>Picture:</strong>
+    4:   <%= image_tag @food_picture.picture.url(:medium) %>
+  app/views/food_pictures/show.html.erb:1:in `_app_views_food_pictures_show_html_erb__4586325262570860757_27868240'
+
+
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.3ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.2ms)
+  Rendered /home/acras/.rvm/gems/ruby-2.0.0-p0/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (30.0ms)
+
+
+Started GET "/food_pictures/4" for 127.0.0.1 at 2013-07-26 14:05:53 -0300
+Processing by FoodPicturesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mFoodPicture Load (0.5ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  Rendered food_pictures/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 40ms (Views: 33.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-26 14:05:53 -0300
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-26 14:05:53 -0300
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-26 14:05:53 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-26 14:05:53 -0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-26 14:05:53 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-26 14:05:53 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-26 14:05:53 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-26 14:05:53 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-26 14:05:53 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-26 14:05:53 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-26 14:05:53 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-26 14:05:53 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-26 14:05:53 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-26 14:05:53 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-26 14:05:53 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-26 14:05:53 -0300
+  [1m[36mFoodPicture Load (0.4ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" ORDER BY "food_pictures"."id" ASC LIMIT 1[0m
+  [1m[35mFoodPicture Load (0.6ms)[0m  SELECT "food_pictures".* FROM "food_pictures" ORDER BY "food_pictures"."id" ASC LIMIT 1
+  [1m[36mFoodPicture Load (0.5ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day > '2013-07-25') ORDER BY "food_pictures"."id" ASC LIMIT 1[0m
+
+
+Started GET "/food_pictures/new" for 127.0.0.1 at 2013-07-26 14:06:42 -0300
+Processing by FoodPicturesController#new as HTML
+  Rendered food_pictures/_form.html.erb (16.7ms)
+  Rendered food_pictures/new.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 41ms (Views: 38.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-26 14:06:42 -0300
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-26 14:06:42 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-26 14:06:42 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-26 14:06:42 -0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-26 14:06:42 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-26 14:06:42 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-26 14:06:43 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-26 14:06:43 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-26 14:06:43 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-26 14:06:43 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-26 14:06:43 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-26 14:06:43 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-26 14:06:43 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-26 14:06:43 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-26 14:06:43 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-26 14:06:43 -0300
+
+
+Started POST "/food_pictures" for 127.0.0.1 at 2013-07-26 14:06:53 -0300
+Processing by FoodPicturesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v2xOz3y/2zVvicN0WUk5SUbNWLiJwu1YDW0FdO4Rzfk=", "food_picture"=>{"day(1i)"=>"2013", "day(2i)"=>"7", "day(3i)"=>"26", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00000002525880 @tempfile=#<Tempfile:/tmp/RackMultipart20130726-23819-7e6qvp>, @original_filename="photo 2.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"food_picture[picture]\"; filename=\"photo 2.JPG\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Food picture"}
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/photo 220130726-23819-ep5m0p.JPG[0]'
+Command :: identify -format %m '/tmp/photo 220130726-23819-ep5m0p.JPG[0]'
+Command :: identify -format %m '/tmp/photo 220130726-23819-ep5m0p.JPG[0]'
+Command :: identify -format %m '/tmp/photo 220130726-23819-ep5m0p.JPG[0]'
+Command :: convert '/tmp/photo 220130726-23819-ep5m0p.JPG[0]' -auto-orient -resize "640x480" '/tmp/photo 220130726-23819-ep5m0p20130726-23819-yj9lzs'
+Command :: file -b --mime '/tmp/photo 220130726-23819-ep5m0p20130726-23819-yj9lzs'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/photo 220130726-23819-ep5m0p.JPG[0]'
+Command :: identify -format %m '/tmp/photo 220130726-23819-ep5m0p.JPG[0]'
+Command :: identify -format %m '/tmp/photo 220130726-23819-ep5m0p.JPG[0]'
+Command :: identify -format %m '/tmp/photo 220130726-23819-ep5m0p.JPG[0]'
+Command :: convert '/tmp/photo 220130726-23819-ep5m0p.JPG[0]' -auto-orient -resize "64x48" '/tmp/photo 220130726-23819-ep5m0p20130726-23819-10grjj1'
+Command :: file -b --mime '/tmp/photo 220130726-23819-ep5m0p20130726-23819-10grjj1'
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mPerson Load (0.7ms)[0m  [1mSELECT "people".* FROM "people" ORDER BY "people"."id" ASC LIMIT 1[0m
+Binary data inserted for `string` type on column `picture_content_type`
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "food_pictures" ("created_at", "day", "picture_content_type", "picture_file_name", "picture_file_size", "picture_updated_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Fri, 26 Jul 2013 17:06:55 UTC +00:00], ["day", Fri, 26 Jul 2013], ["picture_content_type", "image/jpeg"], ["picture_file_name", "photo_2.JPG"], ["picture_file_size", 1249053], ["picture_updated_at", Fri, 26 Jul 2013 17:06:53 UTC +00:00], ["updated_at", Fri, 26 Jul 2013 17:06:55 UTC +00:00]]
+  [1m[36m (39.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/food_pictures/5
+Completed 302 Found in 1980ms (ActiveRecord: 42.1ms)
+
+
+Started GET "/food_pictures/5" for 127.0.0.1 at 2013-07-26 14:06:55 -0300
+Processing by FoodPicturesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mFoodPicture Load (0.3ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1  [["id", "5"]]
+  Rendered food_pictures/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 29ms (Views: 24.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-26 14:06:55 -0300
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-26 14:06:55 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-26 14:06:55 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-26 14:06:55 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-26 14:06:55 -0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-26 14:06:55 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-26 14:06:55 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-26 14:06:55 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-26 14:06:56 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-26 14:06:56 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-26 14:06:56 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-26 14:06:56 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-26 14:06:56 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-26 14:06:56 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-26 14:06:56 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-26 14:06:56 -0300
+
+
+Started GET "/food_pictures/5" for 127.0.0.1 at 2013-07-26 14:07:00 -0300
+Processing by FoodPicturesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mFoodPicture Load (0.3ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  Rendered food_pictures/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 29ms (Views: 23.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-26 14:07:00 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-26 14:07:00 -0300
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-26 14:07:00 -0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-26 14:07:00 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-26 14:07:00 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-26 14:07:00 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-26 14:07:00 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-26 14:07:00 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-26 14:07:00 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-26 14:07:00 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-26 14:07:00 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-26 14:07:00 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-26 14:07:00 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-26 14:07:00 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-26 14:07:00 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-26 14:07:00 -0300
+
+
+Started GET "/food_pictures/5" for 127.0.0.1 at 2013-07-26 14:07:05 -0300
+Processing by FoodPicturesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mFoodPicture Load (0.3ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1  [["id", "5"]]
+  Rendered food_pictures/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 28ms (Views: 23.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-26 14:07:05 -0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-26 14:07:05 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-26 14:07:05 -0300
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-26 14:07:05 -0300
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-26 14:07:05 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-26 14:07:05 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-26 14:07:05 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-26 14:07:05 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-26 14:07:05 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-26 14:07:05 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-26 14:07:05 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-26 14:07:05 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-26 14:07:05 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-26 14:07:05 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-26 14:07:06 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-26 14:07:06 -0300
+  [1m[35mFoodPicture Load (0.6ms)[0m  SELECT "food_pictures".* FROM "food_pictures" ORDER BY "food_pictures"."id" ASC LIMIT 1
+  [1m[36mFoodPicture Load (0.5ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" ORDER BY "food_pictures"."id" ASC LIMIT 1[0m
+  [1m[35mFoodPicture Load (0.5ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day > '2013-07-25') ORDER BY "food_pictures"."id" ASC LIMIT 1
+  [1m[36mFoodPicture Load (0.5ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" ORDER BY "food_pictures"."id" ASC LIMIT 1[0m
+  [1m[35mFoodPicture Load (0.4ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day > '2013-07-25') ORDER BY "food_pictures"."id" ASC LIMIT 1
+  [1m[36mFoodPicture Load (0.5ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" ORDER BY "food_pictures"."id" ASC LIMIT 1[0m
+  [1m[35mFoodPicture Load (0.5ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day > '2013-07-25') ORDER BY "food_pictures"."id" ASC LIMIT 1
+  [1m[36mFoodPicture Load (0.4ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day < '2013-07-26') ORDER BY "food_pictures"."id" DESC LIMIT 1[0m
+
+
+Started GET "/food_pictures/5" for 127.0.0.1 at 2013-07-26 14:08:00 -0300
+Processing by FoodPicturesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mFoodPicture Load (0.6ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  Rendered food_pictures/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 107ms (Views: 24.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/food_pictures/5" for 127.0.0.1 at 2013-07-26 14:09:57 -0300
+Processing by FoodPicturesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mFoodPicture Load (0.5ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mFoodPicture Load (0.8ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day < '2013-07-26') ORDER BY "food_pictures"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day < '2013-07-26') ORDER BY "food_pictures"."id" DESC LIMIT 1
+  [1m[36mFoodPicture Load (0.6ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day > '2013-07-26') ORDER BY "food_pictures"."id" ASC LIMIT 1[0m
+  Rendered food_pictures/show.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 48ms (Views: 39.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-26 14:09:57 -0300
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-26 14:09:57 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-26 14:09:57 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-26 14:09:57 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-26 14:09:57 -0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-26 14:09:57 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-26 14:09:57 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-26 14:09:58 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-26 14:09:58 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-26 14:09:58 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-26 14:09:58 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-26 14:09:58 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-26 14:09:58 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-26 14:09:58 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-26 14:09:58 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-26 14:09:58 -0300
+
+
+Started GET "/food_pictures/4" for 127.0.0.1 at 2013-07-26 14:10:00 -0300
+Processing by FoodPicturesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mFoodPicture Load (0.3ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mFoodPicture Load (0.7ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day < '2013-07-25') ORDER BY "food_pictures"."id" DESC LIMIT 1[0m
+  [1m[35mFoodPicture Load (0.6ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day > '2013-07-25') ORDER BY "food_pictures"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day > '2013-07-25') ORDER BY "food_pictures"."id" ASC LIMIT 1[0m
+  Rendered food_pictures/show.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 38ms (Views: 32.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/food_pictures/5" for 127.0.0.1 at 2013-07-26 14:10:02 -0300
+Processing by FoodPicturesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mFoodPicture Load (0.3ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mFoodPicture Load (0.5ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day < '2013-07-26') ORDER BY "food_pictures"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day < '2013-07-26') ORDER BY "food_pictures"."id" DESC LIMIT 1
+  [1m[36mFoodPicture Load (0.5ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day > '2013-07-26') ORDER BY "food_pictures"."id" ASC LIMIT 1[0m
+  Rendered food_pictures/show.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 38ms (Views: 32.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/food_pictures/4" for 127.0.0.1 at 2013-07-26 14:10:04 -0300
+Processing by FoodPicturesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mFoodPicture Load (0.3ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mFoodPicture Load (0.5ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day < '2013-07-25') ORDER BY "food_pictures"."id" DESC LIMIT 1[0m
+  [1m[35mFoodPicture Load (0.5ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day > '2013-07-25') ORDER BY "food_pictures"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day > '2013-07-25') ORDER BY "food_pictures"."id" ASC LIMIT 1[0m
+  Rendered food_pictures/show.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 34ms (Views: 29.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/food_pictures/4/edit" for 127.0.0.1 at 2013-07-26 14:10:11 -0300
+Processing by FoodPicturesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mFoodPicture Load (0.4ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1  [["id", "4"]]
+  Rendered food_pictures/_form.html.erb (19.9ms)
+  Rendered food_pictures/edit.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 57ms (Views: 52.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-26 14:10:11 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-26 14:10:11 -0300
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-26 14:10:11 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-26 14:10:11 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-26 14:10:11 -0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-26 14:10:11 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-26 14:10:11 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-26 14:10:11 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-26 14:10:11 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-26 14:10:11 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-26 14:10:11 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-26 14:10:11 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-26 14:10:11 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-26 14:10:12 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-26 14:10:12 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-26 14:10:12 -0300
+
+
+Started PATCH "/food_pictures/4" for 127.0.0.1 at 2013-07-26 14:11:42 -0300
+Processing by FoodPicturesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v2xOz3y/2zVvicN0WUk5SUbNWLiJwu1YDW0FdO4Rzfk=", "food_picture"=>{"day(1i)"=>"2013", "day(2i)"=>"7", "day(3i)"=>"25", "picture"=>#<ActionDispatch::Http::UploadedFile:0x00000002532558 @tempfile=#<Tempfile:/tmp/RackMultipart20130726-23819-10ylted>, @original_filename="photo 1.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"food_picture[picture]\"; filename=\"photo 1.JPG\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update Food picture", "id"=>"4"}
+  [1m[36mFoodPicture Load (0.3ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35m (0.2ms)[0m  begin transaction
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/photo 120130726-23819-an5a2r.JPG[0]'
+Command :: identify -format %m '/tmp/photo 120130726-23819-an5a2r.JPG[0]'
+Command :: identify -format %m '/tmp/photo 120130726-23819-an5a2r.JPG[0]'
+Command :: identify -format %m '/tmp/photo 120130726-23819-an5a2r.JPG[0]'
+Command :: convert '/tmp/photo 120130726-23819-an5a2r.JPG[0]' -auto-orient -resize "640x480" '/tmp/photo 120130726-23819-an5a2r20130726-23819-zegdkw'
+Command :: file -b --mime '/tmp/photo 120130726-23819-an5a2r20130726-23819-zegdkw'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/photo 120130726-23819-an5a2r.JPG[0]'
+Command :: identify -format %m '/tmp/photo 120130726-23819-an5a2r.JPG[0]'
+Command :: identify -format %m '/tmp/photo 120130726-23819-an5a2r.JPG[0]'
+Command :: identify -format %m '/tmp/photo 120130726-23819-an5a2r.JPG[0]'
+Command :: convert '/tmp/photo 120130726-23819-an5a2r.JPG[0]' -auto-orient -resize "64x48" '/tmp/photo 120130726-23819-an5a2r20130726-23819-zpx4rs'
+Command :: file -b --mime '/tmp/photo 120130726-23819-an5a2r20130726-23819-zpx4rs'
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT "people".* FROM "people" ORDER BY "people"."id" ASC LIMIT 1[0m
+  [1m[35mSQL (1.1ms)[0m  UPDATE "food_pictures" SET "picture_file_size" = ?, "picture_updated_at" = ?, "picture_file_name" = ?, "updated_at" = ? WHERE "food_pictures"."id" = 4  [["picture_file_size", 1215649], ["picture_updated_at", Fri, 26 Jul 2013 17:11:42 UTC +00:00], ["picture_file_name", "photo_1.JPG"], ["updated_at", Fri, 26 Jul 2013 17:11:47 UTC +00:00]]
+[paperclip] deleting /home/acras/code/lunchPOD/public/system/food_pictures/pictures/000/000/004/original/photo_1.JPG
+[paperclip] deleting /home/acras/code/lunchPOD/public/system/food_pictures/pictures/000/000/004/medium/photo_1.JPG
+[paperclip] deleting /home/acras/code/lunchPOD/public/system/food_pictures/pictures/000/000/004/thumb/photo_1.JPG
+  [1m[36m (25.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/food_pictures/4
+Completed 302 Found in 4962ms (ActiveRecord: 28.6ms)
+
+
+Started GET "/food_pictures/4" for 127.0.0.1 at 2013-07-26 14:11:47 -0300
+Processing by FoodPicturesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mFoodPicture Load (0.5ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mFoodPicture Load (0.5ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day < '2013-07-25') ORDER BY "food_pictures"."id" DESC LIMIT 1[0m
+  [1m[35mFoodPicture Load (0.6ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day > '2013-07-25') ORDER BY "food_pictures"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day > '2013-07-25') ORDER BY "food_pictures"."id" ASC LIMIT 1[0m
+  Rendered food_pictures/show.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 39ms (Views: 32.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-26 14:11:47 -0300
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-26 14:11:48 -0300
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-26 14:11:48 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-26 14:11:48 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-26 14:11:48 -0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-26 14:11:48 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-26 14:11:48 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-26 14:11:48 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-26 14:11:48 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-26 14:11:48 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-26 14:11:48 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-26 14:11:48 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-26 14:11:48 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-26 14:11:48 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-26 14:11:48 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-26 14:11:48 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-26 14:11:50 -0300
+Processing by HomeController#index as HTML
+  [1m[35mFoodPicture Load (0.6ms)[0m  SELECT "food_pictures".* FROM "food_pictures"
+  Rendered home/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 33ms (Views: 30.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-26 14:11:51 -0300
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-26 14:11:51 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-26 14:11:51 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-26 14:11:51 -0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-26 14:11:51 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-26 14:11:51 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-26 14:11:51 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-26 14:11:51 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-26 14:11:51 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-26 14:11:51 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-26 14:11:51 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-26 14:11:51 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-26 14:11:51 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-26 14:11:51 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-26 14:11:51 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-26 14:11:51 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-07-26 14:12:27 -0300
+Processing by HomeController#index as HTML
+  [1m[36mFoodPicture Load (0.4ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" ORDER BY "food_pictures"."id" DESC LIMIT 1[0m
+Redirected to http://localhost:3000/food_pictures/5
+Completed 302 Found in 81ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/food_pictures/5" for 127.0.0.1 at 2013-07-26 14:12:27 -0300
+Processing by FoodPicturesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mFoodPicture Load (0.8ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mFoodPicture Load (0.5ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day < '2013-07-26') ORDER BY "food_pictures"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day < '2013-07-26') ORDER BY "food_pictures"."id" DESC LIMIT 1
+  [1m[36mFoodPicture Load (0.5ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day > '2013-07-26') ORDER BY "food_pictures"."id" ASC LIMIT 1[0m
+  Rendered food_pictures/show.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 42ms (Views: 33.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-07-26 14:12:28 -0300
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-07-26 14:12:28 -0300
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-07-26 14:12:28 -0300
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-07-26 14:12:28 -0300
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-07-26 14:12:28 -0300
+
+
+Started GET "/assets/people.css?body=1" for 127.0.0.1 at 2013-07-26 14:12:28 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-07-26 14:12:28 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-07-26 14:12:28 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-07-26 14:12:28 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-07-26 14:12:28 -0300
+
+
+Started GET "/assets/food_pictures.css?body=1" for 127.0.0.1 at 2013-07-26 14:12:28 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-07-26 14:12:28 -0300
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-07-26 14:12:28 -0300
+
+
+Started GET "/assets/food_pictures.js?body=1" for 127.0.0.1 at 2013-07-26 14:12:28 -0300
+
+
+Started GET "/assets/people.js?body=1" for 127.0.0.1 at 2013-07-26 14:12:28 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-07-26 14:12:28 -0300
+
+
+Started GET "/food_pictures/4" for 127.0.0.1 at 2013-07-26 14:12:30 -0300
+Processing by FoodPicturesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mFoodPicture Load (0.3ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mFoodPicture Load (0.5ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day < '2013-07-25') ORDER BY "food_pictures"."id" DESC LIMIT 1[0m
+  [1m[35mFoodPicture Load (0.5ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day > '2013-07-25') ORDER BY "food_pictures"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day > '2013-07-25') ORDER BY "food_pictures"."id" ASC LIMIT 1[0m
+  Rendered food_pictures/show.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 34ms (Views: 28.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/food_pictures/5" for 127.0.0.1 at 2013-07-26 14:12:33 -0300
+Processing by FoodPicturesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mFoodPicture Load (0.3ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mFoodPicture Load (0.5ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day < '2013-07-26') ORDER BY "food_pictures"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day < '2013-07-26') ORDER BY "food_pictures"."id" DESC LIMIT 1
+  [1m[36mFoodPicture Load (0.6ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day > '2013-07-26') ORDER BY "food_pictures"."id" ASC LIMIT 1[0m
+  Rendered food_pictures/show.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 37ms (Views: 32.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/food_pictures/4" for 127.0.0.1 at 2013-07-26 14:12:35 -0300
+Processing by FoodPicturesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mFoodPicture Load (0.4ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mFoodPicture Load (0.8ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day < '2013-07-25') ORDER BY "food_pictures"."id" DESC LIMIT 1[0m
+  [1m[35mFoodPicture Load (0.7ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day > '2013-07-25') ORDER BY "food_pictures"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day > '2013-07-25') ORDER BY "food_pictures"."id" ASC LIMIT 1[0m
+  Rendered food_pictures/show.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 41ms (Views: 35.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/food_pictures/5" for 127.0.0.1 at 2013-07-26 14:12:44 -0300
+Processing by FoodPicturesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mFoodPicture Load (0.3ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mFoodPicture Load (0.5ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day < '2013-07-26') ORDER BY "food_pictures"."id" DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day < '2013-07-26') ORDER BY "food_pictures"."id" DESC LIMIT 1
+  [1m[36mFoodPicture Load (0.6ms)[0m  [1mSELECT "food_pictures".* FROM "food_pictures" WHERE "food_pictures"."person_id" IS NULL AND (day > '2013-07-26') ORDER BY "food_pictures"."id" ASC LIMIT 1[0m
+  Rendered food_pictures/show.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 33ms (Views: 28.8ms | ActiveRecord: 1.4ms)

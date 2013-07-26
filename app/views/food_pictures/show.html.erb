@@ -1,0 +1,7 @@
+<h2><%= @food_picture.day.strftime('%d/%m/%Y') %></h2>
+<p>
+  <%= link_to '<', food_picture_url(@food_picture.prior) if @food_picture.prior %>
+  <%= image_tag @food_picture.picture.url(:medium) %>
+  <%= link_to '>', food_picture_url(@food_picture.next) if @food_picture.next %>
+</p>
+

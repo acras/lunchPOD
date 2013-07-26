@@ -1,0 +1,25 @@
+<%= form_for(@food_picture) do |f| %>
+  <% if @food_picture.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@food_picture.errors.count, "error") %> prohibited this food_picture from being saved:</h2>
+
+      <ul>
+      <% @food_picture.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :day %><br>
+    <%= f.date_select :day %>
+  </div>
+  <div class="field">
+    <%= f.label :picture %><br>
+    <%= f.file_field :picture %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
